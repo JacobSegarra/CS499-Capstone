@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ==================== COLOR SCHEME ==================== -->
+
+    <!-- Primary Colors - Vibrant Teal/Blue theme -->
+    <color name="primary">#00897B</color> <!-- Teal 600 -->
+    <color name="primary_dark">#00695C</color> <!-- Teal 800 -->
+    <color name="primary_light">#4DB6AC</color> <!-- Teal 300 -->
+    <color name="accent">#FF6F00</color> <!-- Orange 900 - for CTAs -->
+
+    <!-- Background Colors -->
+    <color name="background">#F5F5F5</color> <!-- Light grey background -->
+    <color name="surface">#FFFFFF</color> <!-- White for cards/surfaces -->
+    <color name="surface_variant">#E0F2F1</color> <!-- Very light teal -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color> <!-- Almost black -->
+    <color name="text_secondary">#757575</color> <!-- Grey -->
+    <color name="text_hint">#BDBDBD</color> <!-- Light grey -->
+    <color name="text_on_primary">#FFFFFF</color> <!-- White text on primary -->
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color> <!-- Green for goal reached -->
+    <color name="warning">#FFC107</color> <!-- Amber for warnings -->
+    <color name="error">#F44336</color> <!-- Red for errors/delete -->
+    <color name="info">#2196F3</color> <!-- Blue for info -->
+
+    <!-- UI Element Colors -->
+    <color name="divider">#E0E0E0</color>
+    <color name="ripple">#1A00897B</color> <!-- 10% primary for ripple effect -->
+    <color name="card_shadow">#33000000</color> <!-- 20% black for shadows -->
+
+    <!-- Chart Colors (for when you add charts) -->
+    <color name="chart_line">#00897B</color>
+    <color name="chart_fill">#4D4DB6AC</color>
+    <color name="chart_grid">#E0E0E0</color>
+
+    <!-- Button States -->
+    <color name="button_disabled">#BDBDBD</color>
+    <color name="button_pressed">#00695C</color>
+
+    <!-- ==================== LEGACY COLOR NAMES ==================== -->
+
+    <!-- Legacy primary colors -->
+    <color name="colorPrimary">#00897B</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorPrimaryVariant">#00695C</color>
+    <color name="colorPrimaryContainer">#E0F2F1</color>
+
+    <!-- Legacy accent/secondary colors -->
+    <color name="colorAccent">#FF6F00</color>
+    <color name="colorSecondary">#FF6F00</color>
+    <color name="colorSecondaryVariant">#E65100</color>
+
+    <!-- Legacy error colors -->
+    <color name="colorError">#F44336</color>
+    <color name="red_delete">#F44336</color>
+
+    <!-- Legacy text colors -->
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+    <!-- Legacy background colors -->
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#212121</color>
+    <color name="colorBackground">#F5F5F5</color>
+
+    <!-- ==================== ADDITIONAL UTILITY COLORS ==================== -->
+
+    <!-- Standard Android colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Light grey shades -->
+    <color name="grey_50">#FAFAFA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+</resources>

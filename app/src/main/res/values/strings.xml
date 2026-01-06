@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ================================== 1. Application Info ================================== -->
+    <string name="app_name">Option One Weight Tracking App (Jacob Segarra)</string>
+
+    <!-- ================================== 2. Login & Registration Screen ================================== -->
+    <string name="title_login">Welcome Back</string>
+    <string name="title_register">Create Your Account</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="btn_login">Sign In</string>
+    <string name="btn_register">Create Account</string>
+    <string name="link_forgot_password">Forgot Password?</string>
+    <string name="link_register_prompt">New User? Register here</string>
+    <string name="error_invalid_credentials">Invalid username or password. Please try again.</string>
+    <string name="error_empty_field">This field cannot be empty.</string>
+    <string name="toast_registration_success">Account created successfully! Please log in.</string>
+
+    <!-- ================================== 3. Dashboard Screen ================================== -->
+    <string name="title_dashboard">Weight Tracker Dashboard</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_current_weight">Current Weight:</string>
+    <string name="label_goal_weight">Goal Weight:</string>
+    <string name="label_goal_diff">Goal Difference:</string>
+    <string name="label_last_entry">Last Entry Date:</string>
+    <string name="label_bmi">Current BMI:</string>
+    <string name="btn_view_history">View History</string>
+    <string name="btn_logout">Logout</string>
+    <string name="unit_lbs">lbs</string>
+    <string name="unit_kg">kg</string>
+    <string name="hint_enter_today_s_weight">Enter today\'s weight (lbs)</string>
+    <string name="label_chart_title">Weight History</string>
+    <string name="chart_placeholder_text">Your weight history chart will appear here after you log 3 or more entries.</string>
+
+    <!-- Status Strings for MainActivity -->
+    <string name="text_error_goal">Goal data missing</string>
+    <string name="text_no_entries">Welcome! Tap the Record button to log your first entry.</string>
+    <string name="text_goal_reached">Goal Reached! Congratulations on hitting your target weight!</string>
+
+
+    <!-- ================================== 4. Data Entry Screen ================================== -->
+    <string name="title_data_entry">New Weight Entry</string>
+    <string name="title_edit_entry">Edit Weight Entry</string>
+    <string name="label_weight_input">Your Weight</string>
+    <string name="hint_weight">e.g., 185.5</string>
+    <string name="label_date_entry">Date of Measurement</string>
+    <string name="btn_save_entry">Save Entry</string>
+    <string name="toast_save_success">Weight entry saved!</string>
+    <string name="toast_save_failure">Failed to save entry.</string>
+
+    <!-- ================================== 5. Settings Screen (Goal/SMS Inputs) ================================== -->
+    <string name="title_settings">App Settings</string>
+    <string name="settings_title_goal">Goal Weight (in lbs)</string>
+    <string name="hint_goal_weight">Enter your target weight</string>
+    <string name="settings_title_sms">Emergency/Progress SMS Phone Number</string>
+    <string name="hint_phone_number">e.g., 555-123-4567</string>
+    <string name="btn_save_settings">Save Settings</string>
+
+    <!-- ================================== 6. SMS Permission & Alert Messaging (Keys fixed for SmsNotifier.java) ================================== -->
+    <string name="sms_permission_needed_title">SMS Permission Required</string>
+    <string name="sms_permission_rationale">This app needs SMS permission to send emergency alerts or progress updates to a designated contact.</string>
+    <string name="btn_request_sms_permission">Grant SMS Permission</string>
+    <string name="sms_sent_success">Alert sent to contact successfully.</string>
+    <string name="sms_sent_failed">Failed to send SMS alert. Check number and permissions.</string>
+    <string name="sms_alert_message_format">Weight Tracker Update: Current Weight is %1$s lbs. Goal: %2$s lbs. Progress: %3$s.</string>
+    <string name="sms_progress_goal_met">Goal Reached! Congratulations on hitting your target weight!</string>
+
+    <!-- ================================== 7. General UI Elements (Including Adapter/Grid strings) ================================== -->
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="button_log">Record</string>
+
+    <!-- Strings required by WeightAdapter and grid_item_weight.xml -->
+    <string name="action_edit_entry">Edit Weight Entry</string>
+    <string name="action_delete_entry">Delete Weight Entry</string>
+    <string name="cd_delete_entry">Delete Weight Entry Button</string>
+
+</resources>
