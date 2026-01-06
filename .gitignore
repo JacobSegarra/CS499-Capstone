@@ -1,15 +1,26 @@
+# --- Android Studio & IntelliJ ---
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
 local.properties
+.idea/
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# --- App Specific Builds ---
+# This ensures build folders inside the 'app' module are also ignored
+**/build/
+
+# --- Output Artifacts ---
+*.apk
+*.aar
+*.ap_
+*.dex
+
+# --- System Files ---
+.DS_Store
+thumbs.db
+
+# --- Log files ---
+*.log
