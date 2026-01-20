@@ -188,7 +188,7 @@ com.example.fitnessapp/
 
 This project is developed for academic purposes as part of CS 499 Capstone.
 
-## 👤 Author
+## Author
 
 **Jacob Segarra**
 - University: Southern New Hampshire University
