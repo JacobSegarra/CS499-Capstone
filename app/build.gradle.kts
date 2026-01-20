@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.optiononeweighttrackingappjacobsegarra"
+    namespace = "com.example.fitnessapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.optiononeweighttrackingappjacobsegarra"
+        applicationId = "com.example.fitnessapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -60,12 +60,15 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
 
-
     // === Room Database Dependencies ===
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     // This 'kapt' configuration now relies on the corrected 'id("kotlin-kapt")' line above
     kapt("androidx.room:room-compiler:2.6.1")
+
+    // === Security Dependencies ===
+    // BCrypt for secure password hashing (NEW for Module 3)
+    implementation("at.favre.lib:bcrypt:0.10.2")
 
     // --- Testing Dependencies ---
     testImplementation("junit:junit:4.13.2")
