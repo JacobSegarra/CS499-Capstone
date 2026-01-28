@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Main application theme -->
-    <style name="Theme.OptionOneWeightTrackingAppJacobSegarra" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.FitnessApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>

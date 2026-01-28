@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.fitnessapp.data.User;
 import com.example.fitnessapp.data.WeightEntry;
+import com.example.fitnessapp.data.AppDatabase;
 import com.example.fitnessapp.databinding.ActivityMainBinding;
 import com.example.fitnessapp.viewmodel.EntryViewModel;
 import com.example.fitnessapp.viewmodel.EntryViewModelFactory;
@@ -24,6 +25,8 @@ import com.example.fitnessapp.viewmodel.EntryViewModelFactory;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import android.util.Log;
+import com.example.fitnessapp.algorithm.AlgorithmDemo;
 
 /**
  * The main screen after login/registration. Handles weight logging,
@@ -31,7 +34,7 @@ import java.util.Locale;
  */
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_USER_ID = "com.example.optiononeweighttrackingappjacobsegarra.USER_ID";
+    public static final String EXTRA_USER_ID = "USER_ID";
     private static final int SMS_PERMISSION_REQUEST_CODE = 1001;
 
     private ActivityMainBinding binding;
@@ -68,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
         // 4. Request SMS Permission on start
         requestSmsPermission();
+
+        // === ALGORITHM TEST Module 4 ===
+        Log.d("AlgorithmTest", "Starting algorithm tests for userId: " + currentUserId);
+        String testResults = AlgorithmDemo.runAllTests(currentUserId);
+        Log.d("AlgorithmTest", testResults);
+        Log.d("AlgorithmTest", "Algorithm tests complete!");
+        // === END ALGORITHM TEST ===
     }
 
 
