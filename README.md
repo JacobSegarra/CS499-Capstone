@@ -1,4 +1,4 @@
-**# FitnessApp
+FitnessApp
 
 A comprehensive Android fitness tracking application built with modern architecture patterns and security best practices. Originally developed as a basic weight tracker, now evolving into a full-featured fitness platform with nutrition and workout tracking capabilities.
 
