@@ -1,1 +1,458 @@
-<html><body><h1>CS499-Capstone</h1><h3>Jacob Segarra's ePortfolio</h3></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Segarra - CS 499 ePortfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        section h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .stat-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #333;
+            color: white;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: #8b9eec;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            header p {
+                font-size: 1em;
+            }
+            
+            section {
+                padding: 25px;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jacob Segarra</h1>
+        <p>CS 499 Computer Science Capstone | Southern New Hampshire University</p>
+        <p>📱 FitnessApp: Professional Android Development Portfolio</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- CODE REVIEW VIDEO SECTION -->
+        <section id="code-review">
+            <h2>🎥 Code Review Video</h2>
+            <p>Watch my comprehensive code review walking through the complete FitnessApp enhancement process, including MVVM architecture implementation, BCrypt security, and the development of a 25+ method algorithm suite with scientifically-validated fitness formulas.</p>
+            
+            <div class="video-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fHbl39XfF_Y?si=wziyz_NIJzQU1q0y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <div class="stats">
+                <span class="stat-badge">📊 5,500+ Lines of Code</span>
+                <span class="stat-badge">🧮 25+ Algorithms</span>
+                <span class="stat-badge">🔒 BCrypt Security</span>
+                <span class="stat-badge">⚡ MVVM Architecture</span>
+            </div>
+            
+            <h3>Topics Covered in Video:</h3>
+            <ul>
+                <li>✅ <strong>Original Code Analysis:</strong> Identified security vulnerabilities and architectural weaknesses</li>
+                <li>✅ <strong>MVVM Architecture:</strong> ViewModels, LiveData, Repository pattern implementation</li>
+                <li>✅ <strong>BCrypt Security:</strong> 12-round cost factor password hashing</li>
+                <li>✅ <strong>Input Validation Framework:</strong> Regex patterns and multi-layer validation</li>
+                <li>✅ <strong>Statistical Analysis Algorithms:</strong> Moving averages, linear regression, trend detection</li>
+                <li>✅ <strong>Nutrition Calculations:</strong> BMR (Mifflin-St Jeor), TDEE, macro distribution</li>
+                <li>✅ <strong>Workout Analysis:</strong> 1RM formulas (Epley & Brzycki), progressive overload detection</li>
+                <li>✅ <strong>Algorithm Complexity:</strong> Big-O notation analysis (O(1) to O(n))</li>
+            </ul>
+            
+            <div style="margin-top: 30px;">
+                <a href="https://github.com/jacobsegarra/CS499-Capstone" class="btn" target="_blank">
+                    📁 View ePortfolio Repository
+                </a>
+                <a href="https://github.com/jacobsegarra" class="btn" target="_blank">
+                    👤 GitHub Profile
+                </a>
+                <a href="https://www.youtube.com/watch?v=fHbl39XfF_Y" class="btn" target="_blank">
+                    🎥 Watch on YouTube
+                </a>
+            </div>
+        </section>
+
+        <!-- PROJECT OVERVIEW -->
+        <section id="overview">
+            <h2>📊 Project Overview</h2>
+            <p>FitnessApp is a comprehensive Android fitness tracking application enhanced through a three-module capstone process, transforming a basic weight tracker into an intelligent fitness platform with professional architecture, enterprise-grade security, and scientifically-validated algorithms.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>🏗️ Module 3: Software Design</h4>
+                    <p><strong>Status:</strong> ✅ Complete</p>
+                    <p>Implemented MVVM architecture, BCrypt password security (12-round cost), comprehensive input validation framework, and structured error handling with Result&lt;T&gt; pattern.</p>
+                    <p><strong>Deliverables:</strong> 2,847-word narrative, 10 new files, 7 modified files</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🧮 Module 4: Algorithms</h4>
+                    <p><strong>Status:</strong> ✅ Complete</p>
+                    <p>Developed 25+ algorithm methods including statistical analysis, nutrition calculations (Mifflin-St Jeor equation), and workout metrics. All formulas peer-reviewed and validated.</p>
+                    <p><strong>Deliverables:</strong> 4,847-word narrative, 10 algorithm classes, ~2,000 lines of code</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🗄️ Module 5: Databases</h4>
+                    <p><strong>Status:</strong> 🔄 In Progress</p>
+                    <p>Expanding database from 2 tables to 12+ tables, adding nutrition and workout tracking with proper migrations, database triggers, and views for analytics.</p>
+                    <p><strong>Target:</strong> Complete fitness platform with meal logging and workout tracking</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY FEATURES -->
+        <section id="features">
+            <h2>✨ Key Features</h2>
+            
+            <h3>Weight Tracking & Analysis</h3>
+            <ul>
+                <li>Daily weight logging with intelligent trend detection</li>
+                <li>Moving averages (7-day and 30-day smoothing) using O(n×w) sliding window algorithm</li>
+                <li>Weight predictions using linear regression (least squares method, O(n) complexity)</li>
+                <li>Days-to-goal calculator based on current trend with 0.2 kg/week threshold</li>
+                <li>BMI calculation and WHO categorization (Underweight, Normal, Overweight, Obese)</li>
+                <li>Standard deviation tracking for consistency metrics</li>
+            </ul>
+            
+            <h3>Nutrition Intelligence</h3>
+            <ul>
+                <li>BMR calculation using Mifflin-St Jeor equation (validated with ±10% accuracy for most individuals)</li>
+                <li>TDEE calculation with activity level multipliers (Sedentary 1.2 → Very Active 1.9)</li>
+                <li>Personalized calorie targets for cutting (-500 cal), bulking (+300 cal), or maintenance</li>
+                <li>Macro distribution tailored to fitness goals (Cutting: 40/30/30, Bulking: 30/50/20, Maintenance: 30/40/30)</li>
+                <li>Water intake recommendations (30-35ml per kg, adjusted for activity)</li>
+                <li>Safety minimums enforced (1500 cal male, 1200 cal female)</li>
+            </ul>
+            
+            <h3>Workout Analysis</h3>
+            <ul>
+                <li>1RM estimation using averaged Epley and Brzycki formulas for improved accuracy</li>
+                <li>Progressive overload detection with 2.5% volume threshold (based on sports science research)</li>
+                <li>Strength level assessment relative to bodyweight (Beginner &lt;1.0× → Elite &gt;2.0×)</li>
+                <li>Training weight calculator for different rep ranges (3, 8, 12+ reps)</li>
+                <li>Volume tracking (weight × reps × sets) across workout sessions</li>
+                <li>Intensity calculations (percentage of 1RM) for programming training cycles</li>
+            </ul>
+        </section>
+
+        <!-- TECHNICAL DETAILS -->
+        <section id="technical">
+            <h2>💻 Technical Specifications</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>Core Technologies</h4>
+                    <ul style="margin-left: 0; list-style: none;">
+                        <li>• <strong>Language:</strong> Java</li>
+                        <li>• <strong>Platform:</strong> Android SDK 24+ (Nougat)</li>
+                        <li>• <strong>Architecture:</strong> MVVM with LiveData</li>
+                        <li>• <strong>Database:</strong> Room (SQLite)</li>
+                        <li>• <strong>Build Tool:</strong> Gradle (Kotlin DSL)</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Security & Patterns</h4>
+                    <ul style="margin-left: 0; list-style: none;">
+                        <li>• <strong>Password Security:</strong> BCrypt (12-round cost)</li>
+                        <li>• <strong>Repository Pattern:</strong> Single source of truth</li>
+                        <li>• <strong>Observer Pattern:</strong> LiveData reactive updates</li>
+                        <li>• <strong>Facade Pattern:</strong> AlgorithmService integration</li>
+                        <li>• <strong>Factory Pattern:</strong> ViewModel dependency injection</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Code Metrics</h4>
+                    <ul style="margin-left: 0; list-style: none;">
+                        <li>• <strong>Total Lines:</strong> 5,500+</li>
+                        <li>• <strong>Java Files:</strong> 27+</li>
+                        <li>• <strong>Algorithm Methods:</strong> 25+</li>
+                        <li>• <strong>ViewModels:</strong> 5 (Base + 4 domain)</li>
+                        <li>• <strong>Complexity:</strong> O(1) to O(n)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;">Algorithm Complexity Analysis</h3>
+            <ul>
+                <li><strong>Moving Averages:</strong> O(n×w) where n = entries, w = window size</li>
+                <li><strong>Linear Regression:</strong> O(n) single pass through data</li>
+                <li><strong>BMR/TDEE/1RM:</strong> O(1) constant time calculations</li>
+                <li><strong>Trend Detection:</strong> O(n) analyzes all weight entries</li>
+                <li><strong>Space Complexity:</strong> O(1) for calculations, O(n) for moving averages</li>
+            </ul>
+        </section>
+
+        <!-- SCIENTIFIC VALIDATION -->
+        <section id="scientific">
+            <h2>🔬 Scientific Formula Validation</h2>
+            <p>All algorithms implement peer-reviewed, scientifically-validated formulas from published research:</p>
+            
+            <h3>Nutrition Formulas</h3>
+            <ul>
+                <li><strong>Mifflin-St Jeor Equation (1990):</strong> Most accurate BMR formula for modern populations
+                    <br>Source: Mifflin MD, et al. "A new predictive equation for resting energy expenditure in healthy individuals." <em>American Journal of Clinical Nutrition</em></li>
+            </ul>
+            
+            <h3>Workout Formulas</h3>
+            <ul>
+                <li><strong>Epley Formula (1985):</strong> 1RM = weight × (1 + reps/30)
+                    <br>Source: Epley B. "Poundage Chart." <em>Boyd Epley Workout</em>
+                    <br>Best accuracy: 1-10 rep range</li>
+                <li><strong>Brzycki Formula (1993):</strong> 1RM = weight × (36/(37-reps))
+                    <br>Source: Brzycki M. "Strength Testing: Predicting a One-Rep Max from Reps-to-Fatigue." <em>JOPERD</em>
+                    <br>Best accuracy: 2-10 reps (±3% error)</li>
+            </ul>
+            
+            <h3>Statistical Methods</h3>
+            <ul>
+                <li><strong>Linear Regression:</strong> Least squares method for trend analysis</li>
+                <li><strong>Progressive Overload Threshold:</strong> 2.5% volume increase based on sports science literature</li>
+            </ul>
+        </section>
+
+        <!-- COURSE OUTCOMES -->
+        <section id="outcomes">
+            <h2>🎯 Course Outcomes Demonstrated</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>Outcome 1: Collaborative Environments</h4>
+                    <p>MVVM architecture enables parallel development with clear separation of concerns. Comprehensive documentation supports team collaboration.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Outcome 2: Professional Communication</h4>
+                    <p>Algorithm complexity documented with Big-O notation. All formulas cited with peer-reviewed sources.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Outcome 3: Design Solutions</h4>
+                    <p>Managed security vs. performance trade-offs. Evaluated BCrypt cost factors and validation strictness.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Outcome 4: Well-Founded Techniques</h4>
+                    <p>Implemented scientifically-validated formulas: Mifflin-St Jeor, Epley, Brzycki, least squares regression.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Outcome 5: Security Mindset</h4>
+                    <p>Defense-in-depth validation, BCrypt hashing, SQL injection prevention, error message sanitization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NARRATIVES SECTION -->
+        <section id="narratives">
+            <h2>📄 Project Narratives</h2>
+            <p>Comprehensive documentation of the enhancement process, design decisions, and learning outcomes:</p>
+            
+            <div style="margin-top: 20px;">
+                <h3>Module 3: Software Design & Engineering</h3>
+                <p><strong>2,847 words</strong> - Documenting MVVM architecture implementation, BCrypt security enhancement, input validation framework, and structured error handling. Reflects on architectural trade-offs and security implementation challenges.</p>
+                <a href="#" class="btn">Read Module 3 Narrative</a>
+                
+                <h3 style="margin-top: 30px;">Module 4: Algorithms & Data Structures</h3>
+                <p><strong>4,847 words</strong> - Covering algorithm complexity analysis, scientific formula validation, implementation of statistical analysis, nutrition calculations, and workout metrics. Discusses numerical stability challenges and testing strategies.</p>
+                <a href="#" class="btn">Read Module 4 Narrative</a>
+                
+                <h3 style="margin-top: 30px;">Module 5: Databases</h3>
+                <p><strong>Coming Soon</strong> - Will document database schema expansion, migration strategies, trigger implementation, and integration of nutrition/workout tracking functionality.</p>
+            </div>
+        </section>
+
+        <!-- PROJECT TIMELINE -->
+        <section id="timeline">
+            <h2>📅 Development Timeline</h2>
+            <ul>
+                <li><strong>January 20, 2026:</strong> Module 3 Complete - MVVM Architecture & BCrypt Security</li>
+                <li><strong>January 27, 2026:</strong> Module 4 Complete - Algorithm Suite (25+ methods)</li>
+                <li><strong>February 2026:</strong> Module 5 In Progress - Database Expansion (2 → 12+ tables)</li>
+                <li><strong>Target Completion:</strong> February 2026</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p><strong>Jacob Segarra</strong></p>
+        <p>Southern New Hampshire University | Bachelor of Science in Computer Science</p>
+        <p>CS 499 Computer Science Capstone | 2026</p>
+        <p style="margin-top: 15px;">
+            <a href="https://github.com/jacobsegarra">GitHub</a> | 
+            <a href="https://github.com/jacobsegarra/CS499-Capstone">ePortfolio Repository</a> | 
+            <a href="https://www.youtube.com/watch?v=fHbl39XfF_Y">Code Review Video</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+            © 2026 Jacob Segarra | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+</html>
