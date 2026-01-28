@@ -29,7 +29,7 @@ import com.google.gson.Gson;
  */
 public class DashboardActivity extends AppCompatActivity implements WeightAdapter.OnItemActionListener {
 
-    public static final String EXTRA_USER_ID = "com.example.optiononeweighttrackingappjacobsegarra.USER_ID";
+    public static final String EXTRA_USER_ID = "USER_ID";
 
     private ActivityDashboardBinding binding;
     private EntryViewModel viewModel;
