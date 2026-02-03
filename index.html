@@ -210,7 +210,7 @@
             </div>
             
             <div class="stats">
-                <span class="stat-badge">📊 5,500+ Lines of Code</span>
+                <span class="stat-badge">🗄️ 12 Database Tables</span>
                 <span class="stat-badge">🧮 25+ Algorithms</span>
                 <span class="stat-badge">🔒 BCrypt Security</span>
                 <span class="stat-badge">⚡ MVVM Architecture</span>
@@ -244,26 +244,26 @@
         <!-- PROJECT OVERVIEW -->
         <section id="overview">
             <h2>📊 Project Overview</h2>
-            <p>FitnessApp is a comprehensive Android fitness tracking application enhanced through a three-module capstone process, transforming a basic weight tracker into an intelligent fitness platform with professional architecture, enterprise-grade security, and scientifically-validated algorithms.</p>
+            <p>FitnessApp is a comprehensive Android fitness tracking application enhanced through a three-module capstone process, transforming a basic weight tracker into an intelligent fitness platform with professional architecture, enterprise-grade security, scientifically-validated algorithms, and a production-ready normalized database.</p>
             
             <div class="features">
                 <div class="feature-card">
                     <h4>🏗️ Module 3: Software Design</h4>
                     <p><strong>Status:</strong> ✅ Complete</p>
                     <p>Implemented MVVM architecture, BCrypt password security (12-round cost), comprehensive input validation framework, and structured error handling with Result&lt;T&gt; pattern.</p>
-                    <p><strong>Deliverables:</strong> 2,847-word narrative, 10 new files, 7 modified files</p>
+                    <p><strong>Deliverables:</strong> 10 new files, 7 modified files</p>
                 </div>
                 <div class="feature-card">
                     <h4>🧮 Module 4: Algorithms</h4>
                     <p><strong>Status:</strong> ✅ Complete</p>
                     <p>Developed 25+ algorithm methods including statistical analysis, nutrition calculations (Mifflin-St Jeor equation), and workout metrics. All formulas peer-reviewed and validated.</p>
-                    <p><strong>Deliverables:</strong> 4,847-word narrative, 10 algorithm classes, ~2,000 lines of code</p>
+                    <p><strong>Deliverables:</strong> 10 algorithm classes, ~2,000 lines of code</p>
                 </div>
                 <div class="feature-card">
                     <h4>🗄️ Module 5: Databases</h4>
-                    <p><strong>Status:</strong> 🔄 In Progress</p>
-                    <p>Expanding database from 2 tables to 12+ tables, adding nutrition and workout tracking with proper migrations, database triggers, and views for analytics.</p>
-                    <p><strong>Target:</strong> Complete fitness platform with meal logging and workout tracking</p>
+                    <p><strong>Status:</strong> ✅ Complete</p>
+                    <p>Expanded database from 2 tables to 12 tables with proper normalization, foreign key constraints, and referential integrity. Supports nutrition tracking, workout logging, and personal record management.</p>
+                    <p><strong>Deliverables:</strong> 10 entities + 10 DAOs, ~3,650 lines of code</p>
                 </div>
             </div>
         </section>
@@ -280,6 +280,7 @@
                 <li>Days-to-goal calculator based on current trend with 0.2 kg/week threshold</li>
                 <li>BMI calculation and WHO categorization (Underweight, Normal, Overweight, Obese)</li>
                 <li>Standard deviation tracking for consistency metrics</li>
+                <li>Unit conversion system supporting pounds and kilograms</li>
             </ul>
             
             <h3>Nutrition Intelligence</h3>
@@ -289,7 +290,10 @@
                 <li>Personalized calorie targets for cutting (-500 cal), bulking (+300 cal), or maintenance</li>
                 <li>Macro distribution tailored to fitness goals (Cutting: 40/30/30, Bulking: 30/50/20, Maintenance: 30/40/30)</li>
                 <li>Water intake recommendations (30-35ml per kg, adjusted for activity)</li>
-                <li>Safety minimums enforced (1500 cal male, 1200 cal female)</li>
+                <li>Food database with nutritional information (calories, protein, carbs, fats, fiber, sugar)</li>
+                <li>Meal logging by type (breakfast, lunch, dinner, snack) with serving sizes</li>
+                <li>Daily nutrition summary auto-calculated from logged meals</li>
+                <li>Personalized nutrition goals stored and tracked over time</li>
             </ul>
             
             <h3>Workout Analysis</h3>
@@ -300,6 +304,22 @@
                 <li>Training weight calculator for different rep ranges (3, 8, 12+ reps)</li>
                 <li>Volume tracking (weight × reps × sets) across workout sessions</li>
                 <li>Intensity calculations (percentage of 1RM) for programming training cycles</li>
+                <li>Exercise database with categories and equipment types</li>
+                <li>Workout session tracking by date with total volume and set count</li>
+                <li>Individual set logging with weight, reps, and estimated 1RM</li>
+                <li>Personal record management (max weight, max reps, estimated 1RM)</li>
+                <li>Workout templates for quick routine creation</li>
+            </ul>
+            
+            <h3>Database Architecture</h3>
+            <ul>
+                <li><strong>12-Table Schema:</strong> Normalized to Third Normal Form (3NF)</li>
+                <li><strong>Nutrition Module:</strong> foods, meals, meal_foods, daily_nutrition_summary, nutrition_goals</li>
+                <li><strong>Workout Module:</strong> exercises, workout_sessions, workout_sets, personal_records, workout_templates</li>
+                <li><strong>Foreign Key Constraints:</strong> CASCADE deletion for user data, RESTRICT for protected relationships</li>
+                <li><strong>Indexes:</strong> Strategic placement on foreign keys and frequently queried columns</li>
+                <li><strong>100+ DAO Query Methods:</strong> Type-safe database access with LiveData reactive updates</li>
+                <li><strong>TypeConverters:</strong> Proper handling of boolean and date types in SQLite</li>
             </ul>
         </section>
 
@@ -327,17 +347,19 @@
                         <li>• <strong>Observer Pattern:</strong> LiveData reactive updates</li>
                         <li>• <strong>Facade Pattern:</strong> AlgorithmService integration</li>
                         <li>• <strong>Factory Pattern:</strong> ViewModel dependency injection</li>
+                        <li>• <strong>DAO Pattern:</strong> Type-safe database access</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <h4>Code Metrics</h4>
                     <ul style="margin-left: 0; list-style: none;">
-                        <li>• <strong>Total Lines:</strong> 5,500+</li>
-                        <li>• <strong>Java Files:</strong> 27+</li>
+                        <li>• <strong>Java Files:</strong> 47+</li>
+                        <li>• <strong>Database Tables:</strong> 12</li>
+                        <li>• <strong>Entities:</strong> 12</li>
+                        <li>• <strong>DAOs:</strong> 12 (100+ methods)</li>
                         <li>• <strong>Algorithm Methods:</strong> 25+</li>
                         <li>• <strong>ViewModels:</strong> 5 (Base + 4 domain)</li>
-                        <li>• <strong>Complexity:</strong> O(1) to O(n)</li>
                     </ul>
                 </div>
             </div>
@@ -349,6 +371,15 @@
                 <li><strong>BMR/TDEE/1RM:</strong> O(1) constant time calculations</li>
                 <li><strong>Trend Detection:</strong> O(n) analyzes all weight entries</li>
                 <li><strong>Space Complexity:</strong> O(1) for calculations, O(n) for moving averages</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">Database Design Principles</h3>
+            <ul>
+                <li><strong>Normalization:</strong> Third Normal Form (3NF) eliminates data redundancy</li>
+                <li><strong>Referential Integrity:</strong> Foreign keys enforce data consistency</li>
+                <li><strong>Query Optimization:</strong> Composite indexes on frequently joined columns</li>
+                <li><strong>Type Safety:</strong> Room compile-time SQL verification prevents runtime errors</li>
+                <li><strong>Scalability:</strong> Join tables enable efficient many-to-many relationships</li>
             </ul>
         </section>
 
@@ -387,23 +418,23 @@
             <div class="features">
                 <div class="feature-card">
                     <h4>Outcome 1: Collaborative Environments</h4>
-                    <p>MVVM architecture enables parallel development with clear separation of concerns. Comprehensive documentation supports team collaboration.</p>
+                    <p>MVVM architecture enables parallel development with clear separation of concerns. Normalized database schema supports multiple developers working on different features. Comprehensive documentation supports team collaboration.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Outcome 2: Professional Communication</h4>
-                    <p>Algorithm complexity documented with Big-O notation. All formulas cited with peer-reviewed sources.</p>
+                    <p>Algorithm complexity documented with Big-O notation. All formulas cited with peer-reviewed sources. Database relationships documented with ERD principles and normalization justification.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Outcome 3: Design Solutions</h4>
-                    <p>Managed security vs. performance trade-offs. Evaluated BCrypt cost factors and validation strictness.</p>
+                    <p>Managed security vs. performance trade-offs. Evaluated BCrypt cost factors, validation strictness, and database normalization vs. query performance. Balanced foreign key constraints for data integrity.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Outcome 4: Well-Founded Techniques</h4>
-                    <p>Implemented scientifically-validated formulas: Mifflin-St Jeor, Epley, Brzycki, least squares regression.</p>
+                    <p>Implemented scientifically-validated formulas: Mifflin-St Jeor, Epley, Brzycki, least squares regression. Applied Third Normal Form database design, proper indexing strategies, and industry-standard design patterns.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Outcome 5: Security Mindset</h4>
-                    <p>Defense-in-depth validation, BCrypt hashing, SQL injection prevention, error message sanitization.</p>
+                    <p>Defense-in-depth validation, BCrypt hashing, SQL injection prevention via parameterized queries, referential integrity constraints, cascade deletion for data cleanup, error message sanitization.</p>
                 </div>
             </div>
         </section>
@@ -412,10 +443,10 @@
         <section id="timeline">
             <h2>📅 Development Timeline</h2>
             <ul>
-                <li><strong>January 20, 2026:</strong> Module 3 Complete - MVVM Architecture & BCrypt Security</li>
+                <li><strong>January 20, 2026:</strong> Module 3 Complete - MVVM Architecture & BCrypt Security </li>
                 <li><strong>January 27, 2026:</strong> Module 4 Complete - Algorithm Suite (25+ methods)</li>
-                <li><strong>February 2026:</strong> Module 5 In Progress - Database Expansion (2 → 12+ tables)</li>
-                <li><strong>Target Completion:</strong> February 2026</li>
+                <li><strong>February 3, 2026:</strong> Module 5 Complete - Database Expansion (12 tables, 100+ DAO methods)</li>
+                <li><strong>Status:</strong> All Three Technical Modules Complete - Ready for Final Portfolio Submission</li>
             </ul>
         </section>
 
