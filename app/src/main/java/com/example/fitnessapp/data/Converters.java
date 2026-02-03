@@ -6,7 +6,8 @@ import java.util.Date;
 
 /**
  * Utility class containing TypeConverters to allow Room to handle non-primitive types,
- * specifically converting Date objects to and from Long timestamps.
+ * specifically converting Date objects to and from Long timestamps,
+ * and boolean to/from Integer for database compatibility.
  */
 public class Converters {
 
@@ -28,5 +29,32 @@ public class Converters {
     @TypeConverter
     public static Long dateToTimestamp(Date date) {
         return date == null ? null : date.getTime();
+    }
+
+    /**
+     * Converts an Integer (as stored in the database) to a Boolean.
+     * SQLite stores booleans as 0 (false) or 1 (true).
+     * @param value The Integer value from database (0 or 1)
+     * @return The corresponding Boolean, or null if value was null
+     */
+    @TypeConverter
+    public static Boolean fromInt(Integer value) {
+        if (value == null) {
+            return null;
+        }
+        return value != 0;
+    }
+
+    /**
+     * Converts a Boolean to an Integer for database storage.
+     * @param value The Boolean value
+     * @return 1 for true, 0 for false, null for null
+     */
+    @TypeConverter
+    public static Integer booleanToInt(Boolean value) {
+        if (value == null) {
+            return null;
+        }
+        return value ? 1 : 0;
     }
 }

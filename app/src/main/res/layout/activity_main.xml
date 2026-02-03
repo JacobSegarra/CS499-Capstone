@@ -63,7 +63,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Goal: -- kg"
+                        android:text="Goal: -- lbs"
                         android:textColor="@color/text_on_primary"
                         android:textSize="16sp" />
 
@@ -216,7 +216,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:hint="Weight (kg)"
+                        android:hint="Weight (lbs)"
                         style="@style/Widget.App.TextInputLayout">
 
                         <com.google.android.material.textfield.TextInputEditText

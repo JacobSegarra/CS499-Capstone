@@ -30,12 +30,16 @@ public class User {
     @ColumnInfo(name = "phoneNumber")
     private String phoneNumber;
 
+    @ColumnInfo(name = "preferredUnit")
+    private String preferredUnit;  // "lbs" or "kg"
+
     // Constructor used by RegistrationActivity and Repository
     public User(String username, String passwordHash, double goalWeight, String phoneNumber) {
         this.username = username;
         this.passwordHash = passwordHash;
         this.goalWeight = goalWeight;
         this.phoneNumber = phoneNumber;
+        this.preferredUnit = "lbs";  // Default to pounds
     }
 
     // --- Getters and Setters ---
@@ -78,5 +82,13 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPreferredUnit() {
+        return preferredUnit;
+    }
+
+    public void setPreferredUnit(String preferredUnit) {
+        this.preferredUnit = preferredUnit;
     }
 }
