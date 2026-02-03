@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Locale;
 import android.util.Log;
 import com.example.fitnessapp.algorithm.AlgorithmDemo;
+import com.example.fitnessapp.util.UnitConverter;
 
 /**
  * The main screen after login/registration. Handles weight logging,
@@ -71,22 +72,25 @@ public class MainActivity extends AppCompatActivity {
 
         // 4. Request SMS Permission on start
         requestSmsPermission();
-
-        // === ALGORITHM TEST Module 4 ===
-        Log.d("AlgorithmTest", "Starting algorithm tests for userId: " + currentUserId);
-        String testResults = AlgorithmDemo.runAllTests(currentUserId);
-        Log.d("AlgorithmTest", testResults);
-        Log.d("AlgorithmTest", "Algorithm tests complete!");
-        // === END ALGORITHM TEST ===
     }
-
 
     private void observeData() {
         // Observe User data
         viewModel.getCurrentUser().observe(this, user -> {
             if (user != null) {
                 currentUser = user;
-                binding.textGoalWeight.setText(String.format(Locale.getDefault(), "Goal: %.1f kg", user.getGoalWeight()));
+
+                // Get preferred unit
+                String unit = user.getPreferredUnit();
+                if (unit == null || unit.isEmpty()) {
+                    unit = "lbs";
+                }
+
+                // Display goal weight with unit
+                binding.textGoalWeight.setText(
+                        String.format(Locale.getDefault(), "Goal: %s",
+                                UnitConverter.formatWeight(user.getGoalWeight(), unit))
+                );
             } else {
                 binding.textGoalWeight.setText(R.string.text_error_goal);
             }
@@ -113,25 +117,45 @@ public class MainActivity extends AppCompatActivity {
         WeightEntry latestEntry = entries.get(0); // Entries are ordered by timestamp
         double latestWeight = latestEntry.getWeight();
 
-        // 1. Update Latest Weight
-        binding.textLatestWeight.setText(String.format(Locale.getDefault(), "Latest: %.1f kg", latestWeight));
+        // Get user's preferred unit (default to lbs if not set)
+        String unit = currentUser.getPreferredUnit();
+        if (unit == null || unit.isEmpty()) {
+            unit = "lbs";
+        }
 
-        // 2. Calculate and Update BMI
-        // BMI = Weight (kg) / (Height (m) * Height (m))
-        double bmi = latestWeight / (DEFAULT_HEIGHT_METERS * DEFAULT_HEIGHT_METERS);
+        // 1. Update Latest Weight with unit
+        binding.textLatestWeight.setText(
+                String.format(Locale.getDefault(), "Latest: %s",
+                        UnitConverter.formatWeight(latestWeight, unit))
+        );
+
+        // 2. Calculate and Update BMI (convert to kg for calculation if needed)
+        double weightInKg = unit.equals("kg") ? latestWeight : UnitConverter.lbsToKg(latestWeight);
+        double bmi = weightInKg / (DEFAULT_HEIGHT_METERS * DEFAULT_HEIGHT_METERS);
         String bmiStatus = getBmiStatus(bmi);
-        binding.textBmiStatus.setText(String.format(Locale.getDefault(), "BMI: %.2f (%s)", bmi, bmiStatus));
+        binding.textBmiStatus.setText(
+                String.format(Locale.getDefault(), "BMI: %.2f (%s)", bmi, bmiStatus)
+        );
 
-        // 3. Update Goal Progress
+        // 3. Update Goal Progress with unit
         double goalWeight = currentUser.getGoalWeight();
         double remaining = latestWeight - goalWeight;
         if (remaining <= 0) {
             binding.textGoalProgress.setText(R.string.text_goal_reached);
         } else {
-            binding.textGoalProgress.setText(String.format(Locale.getDefault(), "Remaining: %.1f kg", remaining));
+            binding.textGoalProgress.setText(
+                    String.format(Locale.getDefault(), "Remaining: %s",
+                            UnitConverter.formatWeight(remaining, unit))
+            );
         }
 
-        // 4. Placeholder for Chart
+        // 4. Update Goal Weight Display with unit
+        binding.textGoalWeight.setText(
+                String.format(Locale.getDefault(), "Goal: %s",
+                        UnitConverter.formatWeight(goalWeight, unit))
+        );
+
+        // 5. Placeholder for Chart
         displayChartPlaceholder(entries);
     }
 
@@ -158,29 +182,40 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            double newWeight = Double.parseDouble(weightText);
-
-            if (newWeight <= 0) {
-                Toast.makeText(this, "Weight must be greater than zero.", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            // Create new WeightEntry object
-            WeightEntry newEntry = new WeightEntry(
-                    currentUserId,
-                    newWeight,
-                    new Date().getTime()
-            );
-
-            viewModel.insertWeightEntry(newEntry);
-
-            binding.editTextNewWeight.setText("");
-            Toast.makeText(this, String.format(Locale.getDefault(), "Logged %.1f kg", newWeight), Toast.LENGTH_SHORT).show();
-
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid weight format. Must be a number.", Toast.LENGTH_SHORT).show();
+        // Get user's preferred unit
+        String unit = currentUser != null ? currentUser.getPreferredUnit() : "lbs";
+        if (unit == null || unit.isEmpty()) {
+            unit = "lbs";
         }
+
+        // Parse and validate weight using UnitConverter
+        Double newWeight = UnitConverter.parseWeight(weightText, unit);
+
+        if (newWeight == null) {
+            double min = UnitConverter.getMinWeight(unit);
+            double max = UnitConverter.getMaxWeight(unit);
+            Toast.makeText(this,
+                    String.format(Locale.getDefault(),
+                            "Invalid weight. Must be between %.0f and %.0f %s",
+                            min, max, unit),
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // Create new WeightEntry object
+        WeightEntry newEntry = new WeightEntry(
+                currentUserId,
+                newWeight,
+                new Date().getTime()
+        );
+
+        viewModel.insertWeightEntry(newEntry);
+
+        binding.editTextNewWeight.setText("");
+        Toast.makeText(this,
+                String.format(Locale.getDefault(), "Logged %s",
+                        UnitConverter.formatWeight(newWeight, unit)),
+                Toast.LENGTH_SHORT).show();
     }
 
     private void navigateToDashboard() {
@@ -197,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu); // Ensure you have main_menu.xml
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
