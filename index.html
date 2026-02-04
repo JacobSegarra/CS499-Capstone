@@ -5,193 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Segarra - CS 499 ePortfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        section {
-            background: white;
-            margin: 30px 0;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-        
-        section h3 {
-            color: #555;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        
-        .video-embed {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 30px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        .video-embed iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-        
-        .feature-card {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
-        }
-        
-        .feature-card h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        
-        .stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 25px 0;
-        }
-        
-        .stat-badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 10px 10px 0;
-            transition: background 0.3s;
-            font-weight: bold;
-        }
-        
-        .btn:hover {
-            background: #5568d3;
-        }
-        
-        ul {
-            margin-left: 25px;
-            margin-top: 15px;
-        }
-        
-        ul li {
-            margin-bottom: 10px;
-            line-height: 1.8;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #333;
-            color: white;
-            margin-top: 50px;
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        footer a:hover {
-            color: #8b9eec;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 60px 20px; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.2em; opacity: 0.9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        section { background: white; margin: 30px 0; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        section h2 { color: #667eea; margin-bottom: 20px; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+        section h3 { color: #555; margin-top: 25px; margin-bottom: 15px; }
+        .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 30px 0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .feature-card { background: #f9f9f9; padding: 25px; border-radius: 8px; border-left: 4px solid #667eea; transition: transform 0.3s, box-shadow 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2); }
+        .feature-card h4 { color: #667eea; margin-bottom: 10px; font-size: 1.2em; }
+        details { margin-top: 15px; border: 2px solid #667eea; border-radius: 8px; padding: 15px; background: white; }
+        summary { cursor: pointer; font-weight: bold; color: #667eea; font-size: 1.05em; padding: 5px; user-select: none; }
+        summary:hover { color: #5568d3; }
+        summary::marker { content: '📖 '; }
+        details[open] summary::marker { content: '📘 '; }
+        .narrative-content { padding: 20px; margin-top: 15px; background: #fafafa; border-left: 3px solid #667eea; max-height: 500px; overflow-y: auto; border-radius: 5px; line-height: 1.8; white-space: pre-wrap; }
+        .stats { display: flex; flex-wrap: wrap; gap: 15px; margin: 25px 0; }
+        .stat-badge { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9em; }
+        .btn { display: inline-block; background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 10px 10px 10px 0; transition: background 0.3s; font-weight: bold; }
+        .btn:hover { background: #5568d3; }
+        ul { margin-left: 25px; margin-top: 15px; }
+        ul li { margin-bottom: 10px; line-height: 1.8; }
+        footer { text-align: center; padding: 30px; background: #333; color: white; margin-top: 50px; }
+        footer p { margin: 5px 0; }
+        footer a { color: #667eea; text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: #8b9eec; }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            
-            header p {
-                font-size: 1em;
-            }
-            
-            section {
-                padding: 25px;
-            }
-            
-            .stats {
-                flex-direction: column;
-            }
+            header h1 { font-size: 1.8em; }
+            header p { font-size: 1em; }
+            section { padding: 25px; }
+            .stats { flex-direction: column; }
+            .narrative-content { max-height: 400px; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Jacob Segarra</h1>
         <p>CS 499 Computer Science Capstone | Southern New Hampshire University</p>
@@ -199,8 +53,6 @@
     </header>
 
     <div class="container">
-        
-        <!-- CODE REVIEW VIDEO SECTION -->
         <section id="code-review">
             <h2>🎥 Code Review Video</h2>
             <p>Watch my comprehensive code review walking through the complete FitnessApp enhancement process, including MVVM architecture implementation, BCrypt security, and the development of a 25+ method algorithm suite with scientifically-validated fitness formulas.</p>
@@ -229,19 +81,12 @@
             </ul>
             
             <div style="margin-top: 30px;">
-                <a href="https://github.com/jacobsegarra/CS499-Capstone" class="btn" target="_blank">
-                    📁 View ePortfolio Repository
-                </a>
-                <a href="https://github.com/jacobsegarra" class="btn" target="_blank">
-                    👤 GitHub Profile
-                </a>
-                <a href="https://www.youtube.com/watch?v=fHbl39XfF_Y" class="btn" target="_blank">
-                    🎥 Watch on YouTube
-                </a>
+                <a href="https://github.com/jacobsegarra/CS499-Capstone" class="btn" target="_blank">📁 View ePortfolio Repository</a>
+                <a href="https://github.com/jacobsegarra" class="btn" target="_blank">👤 GitHub Profile</a>
+                <a href="https://www.youtube.com/watch?v=fHbl39XfF_Y" class="btn" target="_blank">🎥 Watch on YouTube</a>
             </div>
         </section>
 
-        <!-- PROJECT OVERVIEW -->
         <section id="overview">
             <h2>📊 Project Overview</h2>
             <p>FitnessApp is a comprehensive Android fitness tracking application enhanced through a three-module capstone process, transforming a basic weight tracker into an intelligent fitness platform with professional architecture, enterprise-grade security, scientifically-validated algorithms, and a production-ready normalized database.</p>
@@ -252,22 +97,192 @@
                     <p><strong>Status:</strong> ✅ Complete</p>
                     <p>Implemented MVVM architecture, BCrypt password security (12-round cost), comprehensive input validation framework, and structured error handling with Result&lt;T&gt; pattern.</p>
                     <p><strong>Deliverables:</strong> 10 new files, 7 modified files</p>
+                    
+                    <details>
+                        <summary>Read Full Enhancement Narrative</summary>
+                        <div class="narrative-content">The artifact is a comprehensive Android fitness tracking application, originally developed as a basic weight tracking app in my Mobile Architecture and Programming course. The original application provided basic weight logging functionality with user authentication but suffered from critical security vulnerabilities and architectural inconsistencies. It stored passwords in plain text, mixed UI logic with business logic by having activities directly access database repositories, lacked input validation, and had minimal error handling.
+
+This enhancement restructured the application around the Model-View-ViewModel (MVVM) architectural pattern, implemented BCrypt password hashing for security, created a comprehensive input validation framework, and established structured error handling throughout the application. The transformation involved creating 10 new utility and ViewModel classes, modifying 7 existing files including core data entities and repositories, and refactoring all user-facing activities to properly separate concerns between presentation and business logic layers.
+
+I selected this artifact for my ePortfolio because it demonstrates my ability to recognize architectural deficiencies in existing code and refactor to industry best practices. The implementation of BCrypt password hashing showcases my understanding of cryptographic security principles. The SecurityUtils class centralizes all cryptographic operations, following the Single Responsibility Principle and making the codebase more maintainable. This component required understanding of one-way hashing functions and how to verify passwords without ever storing them in plaintext.
+
+The ValidationUtils class demonstrates my ability to design reusable, extensible frameworks. I created a centralized validation system using regex patterns and a custom ValidationResult inner class. This design pattern provides consistent validation across the application while allowing each validation method to return structured success/failure information with specific error messages. The framework validates usernames (4-20 alphanumeric characters), passwords (minimum 8 characters with uppercase, lowercase, and numbers), phone numbers (10-digit US format), and weight values (0-500 kg range), with each validation rule documented and modifiable.
+
+The complete MVVM refactoring represents the most significant architectural improvement. I created a BaseViewModel that provides shared functionality (loading states, error messaging, success messaging) for all ViewModels, demonstrating understanding of inheritance and the DRY (Don&#x27;t Repeat Yourself) principle. Each specific ViewModel (LoginViewModel, RegistrationViewModel, SettingsViewModel) handles business logic for its domain while exposing only LiveData observables to the UI layer. This separation means Activities now contain only 60-100 lines of view-binding code, compared to the original 150+ lines that mixed UI, validation, database access, and error handling. The architecture makes the codebase much more testable.
+
+The generic Result&lt;T&gt; wrapper class showcases my understanding of type-safe error handling patterns common in modern development. Instead of throwing exceptions that might crash the app, repository methods now return Result.success(data) or Result.failure(errorMessage), forcing calling code to explicitly handle both success and failure cases. This makes error states visible in the type system.
+
+The EntryRepository transformation demonstrates my ability to design clean data access layers. The repository now serves as the single source for all user-related operations, handling authentication with BCrypt verification, registration with comprehensive validation, and username availability checks. The repository properly manages background threading using AppDatabase.databaseWriteExecutor, ensuring database operations never block the main UI thread.
+
+The improvements span three dimensions of security, architecture, and code quality. I eliminated the most critical vulnerability by implementing BCrypt password hashing. The User entity field changed from password to passwordHash, the database schema updated to version 3, and all authentication now happens through secure password verification rather than plain-text comparison. Input validation prevents SQL injection attempts, buffer overflow strings, and malicious data entry. These changes transform the app from &quot;would never pass a security audit&quot; to &quot;implements industry-standard security practices.&quot;
+
+Architectural improvements establish proper separation of concerns through MVVM. Activities no longer directly access repositories or perform business logic, they observe LiveData from ViewModels and update UI accordingly. ViewModels contain all business logic and operate through configuration changes like screen rotation. The Repository pattern abstracts data access, and the addition of ViewModelFactory classes enables proper dependency injection. This architecture makes the codebase maintainable by a team and testable at every layer.
+
+Code quality improvements include Javadoc documentation explaining not just what code does but why design decisions were made, structured error handling with user-friendly messages instead of generic failures, centralized utility classes following Single Responsibility Principle, and consistent naming conventions across the entire codebase. Activities reduced from 150+ lines to 60-100 lines, complexity decreased as business logic moved to testable ViewModels, and every public method now has documentation explaining parameters, return values, and potential exceptions.
+
+I successfully met three course outcomes planned for this enhancement.
+
+Course Outcome 1: Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.
+
+The MVVM architecture supports collaborative development by establishing clear boundaries between components. A UI designer can modify Activities without understanding business logic. A backend developer can update repository methods without touching ViewModels. A QA engineer can write unit tests for ViewModels without running the full Android app. The comprehensive documentation I added enables team members to understand intent. The modular structure means multiple developers can work simultaneously on different ViewModels without merge conflicts.
+
+Course Outcome 3: Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices.
+
+This enhancement required evaluating multiple trade-offs and making informed decisions. The BCrypt implementation demonstrates security vs. performance trade-offs—hashing is computationally taxing, but I implemented it on background threads to avoid UI blocking. The validation framework shows strictness vs. user convenience—requiring 8+ character passwords with mixed case and numbers is more secure but less convenient. I chose industry-standard password requirements as a middle ground. The MVVM architecture itself is a trade-off: more files and initial setup complexity in exchange for long-term maintainability and testability.
+
+Course Outcome 5: Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.
+
+The security enhancements demonstrate thinking like an attacker. Plain-text password storage is vulnerable to database breaches. BCrypt hashing mitigates this by making passwords infeasible to crack even with database access. The validation framework prevents several attack options. SQL injection attempts through malicious usernames, buffer overflow attempts through excessively long inputs, and phone number spoofing through format validation. The Result wrapper prevents information leak through error messages. Instead of exposing &quot;SQLException: duplicate key&quot; to users (which reveals database structure), the app shows &quot;Username already exists.&quot; The structured error handling makes sure exceptions don&#x27;t crash the app and potentially expose stack traces. I implemented these security measures in layers (entity validation, DAO validation, repository validation) following security principles, so even if one layer fails, others provide protection.
+
+The most valuable learning came from recognizing that good architecture isn&#x27;t just about making code work, it&#x27;s about making code maintainable, testable, and collaborative. Before this enhancement, I understood MVVM conceptually but hadn&#x27;t experienced the practical benefits. I learned that separating concerns is a necessity for code that will be maintained over time.
+
+I also learned that security is not a feature you add at the end but a mindset you bring from the beginning. The validation framework taught me that good security is user-friendly security. Clear error messages help users create secure credentials instead of frustrating them with vague failures.
+
+One challenge was creating SettingsViewModel and requiring passing a userId parameter, which ViewModels doesn’t support by default. I initially tried putting userId in the ViewModel constructor, which caused crashes because ViewModelProvider couldn&#x27;t instantiate it. This forced me to learn the Factory pattern and create SettingsViewModelFactory. The challenge was understanding why ViewModels need special instantiation, they&#x27;re components managed by the Android framework, not ordinary objects. The factory pattern allows me to provide custom parameters while still letting Android manage the ViewModel lifecycle. This challenge showed me that Android architecture components aren&#x27;t just code patterns and that they integrate deeply with the Android lifecycle, and you need to follow framework rules.
+
+Refactoring LoginActivity to use LoginViewModel while keeping the app functional required understanding the entire authentication flow. I couldn&#x27;t just delete old code and write new code, I had to trace how login currently worked, identify every piece of logic that needed to move to the ViewModel, update the repository methods to return Result objects, and then wire up the Activity to observe ViewModel state changes. I solved this by refactoring one Activity at a time and testing after each one. This taught me that refactoring large codebases is not about rewriting everything at once, it&#x27;s about small, testable changes.
+
+After implementing BCrypt hashing, I couldn&#x27;t test login with old users because their passwords were plain-text and wouldn&#x27;t match BCrypt hashes. I had to uninstall the app completely to clear the database, then re-register a test user with the new hashing system. This testing revealed a migration problem. This taught me that security improvements can&#x27;t just &quot;go live,&quot; they require careful planning and user communication.
+
+The most valuable learning was that software architecture is about managing complexity and allowing change. Bad architecture, like my original Activities doing everything, works fine for the first version, but it becomes a nightmare when you need to add features, fix bugs, or work with a team. Good architecture, like MVVM with proper separation of concerns, has higher upfront cost but is a worthy investment whenever you alter the code. After this enhancement, adding a fourth ViewModel for the upcoming nutrition module will take hours instead of days because the pattern is established. Testing the authentication logic will be straightforward because it&#x27;s isolated in LoginViewModel. Explaining the codebase to a teammate will be easier because each component is clear and has documented responsibility.</div>
+                    </details>
                 </div>
+                
                 <div class="feature-card">
                     <h4>🧮 Module 4: Algorithms</h4>
                     <p><strong>Status:</strong> ✅ Complete</p>
                     <p>Developed 25+ algorithm methods including statistical analysis, nutrition calculations (Mifflin-St Jeor equation), and workout metrics. All formulas peer-reviewed and validated.</p>
                     <p><strong>Deliverables:</strong> 10 algorithm classes</p>
+                    
+                    <details>
+                        <summary>Read Full Enhancement Narrative</summary>
+                        <div class="narrative-content">The artifact is the FitnessApp Android application, originally developed as a basic weight tracking tool in my Mobile Architecture and Programming course. This enhancement transforms the application from a simple data logger into an intelligent fitness analysis platform through the implementation of sophisticated algorithmic systems.
+
+The original application provided basic CRUD operations for weight entries but lacked analytical capabilities. Users could log weights and view historical data, but the app offered no insights, predictions, or personalized recommendations. This enhancement addresses that limitation by implementing three comprehensive algorithm suites: statistical analysis for weight trend detection, nutrition calculations based on metabolic science, and workout performance metrics using established strength training formulas.
+
+The enhancement consists of 10 new Java classes totaling approximately 2,000 lines of code, organized into two new packages: algorithm (containing seven analytical classes) and model (containing three result container classes). The statistical analyzer implements moving averages with configurable window sizes, linear regression using the least squares method for trend detection, and predictive algorithms that predict future weight based on historical patterns. The nutrition calculator implements the Mifflin-St Jeor equation for basal metabolic rate, applies activity multipliers for total daily energy expenditure, and calculates macronutrient distribution. The workout analyzer implements both Epley and Brzycki formulas for one-rep maximum estimation, tracks training volume across sessions, and detects progressive overload using a 2.5% threshold based on sports science research.
+
+I selected this artifact because it demonstrates the practical application of algorithmic thinking to solve real-world problems. The enhancement showcases not just coding ability but algorithmic reasoning. Selecting appropriate data structures, analyzing complexity trade-offs, and implementing scientifically validated formulas with proper error handling and edge case management.
+
+The moving average implementation demonstrates understanding of sliding window algorithms and their O(n×w) time complexity, where n represents data points and w represents window size. I chose to implement this with nested loops, accepting the slightly higher complexity in exchange for maintainability and straightforward debugging. The algorithm has a rolling calculation across the dataset, computing both 7-day and 30-day averages to provide short-term and long-term trends. This dual-window approach gives users immediate feedback on recent changes while smoothing out daily fluctuations that could mislead interpretation.
+
+The linear regression implementation showcases mathematical algorithm translation into code. Using the least squares method, the algorithm calculates the slope of weight change over time with O(n) complexity through a single pass accumulating sums. The formula:
+
+slope = (n×Σxy - Σx×Σy) / (n×Σx² - (Σx)²)
+
+required careful implementation to avoid instability, particularly handling the edge case where the denominator approaches zero (indicating no time variance in data). I chose to convert timestamps to days-since-start rather than working with millisecond values, preventing integer overflow issues that could happen with large timestamp multiplications. This preprocessing step adds minimal overhead but significantly improves numerical stability.
+
+The trend detection algorithm demonstrates threshold-based classification. Rather than simply reporting &quot;gaining&quot; or &quot;losing&quot; for any non-zero change rate, the algorithm implements a 0.2 kg/week threshold below which changes are classified as &quot;maintaining.&quot; This design decision reflects understanding that weight naturally fluctuates due to hydration, food timing, and measurement variance. The threshold value comes from nutritional science literature indicating that changes below this rate are typically within normal daily variation rather than representing true body composition change.
+
+The BMR calculation implements the Mifflin-St Jeor equation, selected after researching multiple predictive equations (Harris-Benedict, Katch-McArdle, Mifflin-St Jeor) and finding that Mifflin-St Jeor demonstrates the highest accuracy for modern populations according to studies. The equation:
+
+BMR = (10 × weight_kg) + (6.25 × height_cm) - (5 × age) + s
+
+executes in O(1) constant time. The challenge here was not complexity, but making sure the formula implementation matched the published equation, including proper gender constant application (+5 for males, -161 for females) and correct unit handling to avoid errors like mixing pounds with kilograms.
+
+The TDEE calculation applies activity multipliers to BMR, using an enum-based approach that maps activity levels to constants (sedentary=1.2, light=1.375, moderate=1.55, active=1.725, very_active=1.9). This design pattern demonstrates understanding of the strategy pattern in algorithm design and encapsulates varying activity levels behind an interface.
+
+The macronutrient distribution algorithm showcases multi-step calculation with intermediate validation. Given a calorie target and fitness goal, the algorithm distributes calories across protein, carbohydrates, and fats according to evidence-based ratios. The implementation needed attention to rounding, since macros must be whole grams but calorie calculations involve fractional values, I implemented a rounding strategy that ensures the sum of macro-derived calories approximately equals the target, preventing user confusion when recalculating totals.
+
+The one-rep maximum calculations implement two established formulas, Epley and Brzycki, and average their results for improved accuracy. The Epley formula:
+
+1RM = weight × (1 + reps/30))
+
+executes in O(1) time but has varying accuracy across rep ranges. The Brzycki formula:
+
+1RM = weight × (36/(37-reps))
+
+provides better accuracy in the 2-10 rep range. My implementation handles this edge case by checking rep count before applying Brzycki, falling back to Epley alone for high-rep sets. This demonstrates defensive programming, anticipating edge cases and implementing degradation rather than allowing runtime failures.
+
+The progressive overload detection algorithm compares current workout volume against previous sessions using a percentage-based threshold. Rather than flagging any volume increase as &quot;progress,&quot; the algorithm requires a minimum 2.5% improvement to account for measurement variance and verify detected progress represents meaningful change. The O(1) complexity makes this suitable for real-time feedback during workout logging, enabling immediate motivational feedback when users achieve progressive overload.
+
+The improvements span three algorithmic dimensions: computational efficiency, scientific validity, and practical utility.
+
+Computational efficiency improvements focus on selecting appropriate algorithms for the data scale. The statistical analyzer operates on weight entry lists typically containing 30-90 data points (1-3 months of daily tracking). For this scale, the O(n²) brute force of recalculating moving averages from scratch on each UI update wouldn’t be noticed. However, I implemented O(n) sliding window calculation not for performance but for algorithmic correctness, demonstrating understanding that the right algorithm matters even when the wrong algorithm would be fast enough. As the application scales to years of data (1000+ entries), the O(n) versus O(n²) distinction becomes meaningful, and the codebase won&#x27;t require algorithmic refactoring.
+
+Scientific validity improvements required extensive research into fitness science literature. I found formulas in their original peer-reviewed publications and validated them against subsequent research. For example, the Mifflin-St Jeor equation implementation cites the 1990 American Journal of Clinical Nutrition study that established the formula, and my code comments note its ±10% accuracy range. This research process taught me that algorithm implementation isn&#x27;t just about translating math into code, it&#x27;s about understanding the algorithm&#x27;s context, limitations, and appropriate use cases.
+
+Practical utility improvements focus on making algorithms user-facing rather than just computational. The AlgorithmService class implements the facade pattern, providing high-level methods that combine multiple algorithms into complete analyses. For example, analyzeWeightTrend() calls seven different statistical methods, packages results into a WeightTrendAnalysis model object with readable descriptions and returns null with graceful degradation if insufficient data exists rather than throwing exceptions. This service layer demonstrates understanding that algorithms exist to solve user problems, not to showcase mathematical complexity.
+
+I successfully met both course outcomes planned for this enhancement, with learning that extended beyond initial expectations.
+
+Course Outcome 2: Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science
+
+The algorithmic documentation directly supports collaborative development by making complex calculations understandable to teammates with varying backgrounds. Every algorithm includes comprehensive Javadoc that documents not just what parameters mean but why the algorithm works this way, what its complexity is, and where the formula originates. For example, the BMR calculation Javadoc explains &quot;This is the most accurate formula for modern populations&quot; and cites the validation study, enabling a UI designer or product manager to understand why we chose this approach without needing computer science expertise.
+
+The complexity analysis documentation (O(n), O(1), etc.) enables different collaboration patterns. A backend engineer can evaluate whether algorithms should move to a server for caching versus staying client-side. A QA engineer can design performance test cases knowing which algorithms scale with data size. A product manager can make informed decisions about feature timelines understanding that adding more complex algorithms might require optimization work. This documentation transforms algorithms from black boxes into discussable components of system design.
+
+The use of well-named constants and enums (ActivityLevel.MODERATE, Goal.CUTTING). When a teammate says &quot;we should adjust the active multiplier,&quot; everyone understands we&#x27;re talking about FormulaConstants.ACTIVITY_ACTIVE rather than searching through code for &quot;1.725.&quot; This demonstrates that algorithmic thinking includes choosing representations that facilitate communication, not just machine execution.
+
+Course Outcome 4: Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals
+
+This enhancement demonstrates well-founded techniques through exclusive use of scientifically validated formulas. The Mifflin-St Jeor equation isn&#x27;t just &quot;a BMR formula,&quot; it&#x27;s the result of indirect calorimetry measurements on 498 subjects with validation demonstrating superior accuracy to earlier Harris-Benedict equations. The Epley and Brzycki formulas have been validated against actual 1RM testing in thousands of athletes across multiple studies. Using these established formulas rather than inventing my own allows the app to provide accurate predictions rather than pseudoscientific estimates.
+
+The innovative aspect lies not in the formulas themselves but in their integration and contextual application. The nutrition calculator doesn&#x27;t just compute BMR, it validates results against safety minimums, adjusts for activity level, distributes macros according to goals, and calculates water intake recommendations, providing a complete nutrition profile from a single method call. This aggregation transforms individual formulas into a practical tool. Similarly, the workout analyzer doesn&#x27;t just estimate 1RM, it detects progressive overload, assesses strength levels relative to body weight, calculates training recommendations for different rep ranges, and suggests rest periods based on intensity. This approach demonstrates understanding that valuable tools solve complete problems, not just perform isolated calculations.
+
+My original plan anticipated these outcomes would be addressed through algorithm implementation and documentation. What I underestimated was the depth of scientific validation required for fitness algorithms. In software engineering coursework, we typically implement algorithms where correctness is provable or where validation is straightforward (search algorithms). Fitness algorithms operate in the obscure reality of biological systems with individual variation, measurement error, and incomplete science. Learning to evaluate competing formulas, understand their validation methodologies, and document their accuracy ranges taught me that algorithmic decision-making in applied domains requires domain expertise, not just computational expertise.
+
+The most valuable learning was recognizing the distinction between mathematical algorithms and production algorithms. Production algorithms must handle missing data, invalid inputs, edge cases, and partial information while still providing useful results. The statistical analyzer must work whether users have 5 weight entries or 500. The nutrition calculator needs to validate height, weight, and age are physically plausible before performing calculations. The workout analyzer must handle the user entering 40 reps (where Brzycki formula breaks down) without crashing.
+
+The research process for scientific validation taught me that software engineering increasingly requires interdisciplinary knowledge. I can write code that implements a formula exactly as specified, but if the formula itself is outdated or inappropriate for my use case, the implementation is worthless. This realization will shape how I approach future projects: I&#x27;ll invest time understanding the problem domain before rushing to implementation.
+
+Implementing linear regression exposed numerical instability issues I hadn&#x27;t encountered in coursework examples with small, clean datasets. When calculating slope using real timestamps (milliseconds since epoch), the values are enormous and squaring them for the Σx² term causes integer overflow or floating-point precision loss. My initial implementation produced nonsensical slope values because sums exceeded double precision limits.
+
+I solved this by transforming timestamps to days-since-start, converting absolute time to relative time. The first entry becomes day 0, the second becomes day 1 (or day 1.3 if 1.3 days elapsed), and so on. This transformation requires only subtraction and division but changes the numerical scale from billions to tens, eliminating overflow. The solution taught me that algorithm implementation isn&#x27;t just about translating formulas, it requires understanding numerical properties and choosing appropriate representations.
+
+I initially designed algorithms as purely mathematical utilities with no Android dependencies, thinking this would maximize reusability and testability. However, the integration layer between algorithms and Activities became clumsy, with Activities needing to handle database queries, format results, manage background threading, and update UI.
+
+I solved this partially through the AlgorithmService facade class, which provides high-level methods that combine multiple algorithms and return structured results. This reduced Activity code but didn&#x27;t eliminate threading concerns. The challenge revealed a fundamental strain in algorithm design. Portable algorithms are testable but require more integration code, while framework-aware algorithms are convenient but tightly coupled. I chose the pure approach for this module, but in Module Five&#x27;s database enhancement, I&#x27;ll implement a proper repository pattern with background threading handled at the data layer, removing this concern from both algorithms and Activities.
+
+This enhancement transformed the FitnessApp from a data collection tool into an intelligent analysis platform by implementing three algorithm suites spanning statistical analysis, nutrition science, and workout metrics.
+
+The enhancement meets both planned course outcomes, professional communication through comprehensive documentation and well-founded techniques through scientific validation. Most importantly, this enhancement demonstrated that algorithmic expertise in industry isn&#x27;t about implementing textbook algorithms or optimizing competitive programming solutions. It&#x27;s about applying thinking to solve real problems with appropriate techniques, domain validation, and proper integration into systems that deliver value to users. The algorithms work and the tests pass. More valuable than any of those outcomes is the professional judgment developed through researching, implementing, testing, and refining these algorithms to meet requirements.</div>
+                    </details>
                 </div>
+                
                 <div class="feature-card">
                     <h4>🗄️ Module 5: Databases</h4>
                     <p><strong>Status:</strong> ✅ Complete</p>
                     <p>Expanded database from 2 tables to 12 tables with proper normalization, foreign key constraints, and referential integrity. Supports nutrition tracking, workout logging, and personal record management.</p>
                     <p><strong>Deliverables:</strong> 10 entities + 10 DAOs</p>
+                    
+                    <details>
+                        <summary>Read Full Enhancement Narrative</summary>
+                        <div class="narrative-content">The artifact enhanced for Module 5 is the database architecture of FitnessApp, an Android fitness tracking application originally developed in CS 360 Mobile Architecture and Programming. The original artifact was a simple weight tracking system with two database tables: users and weight_entries. This enhancement transforms the database into a comprehensive fitness platform supporting nutrition tracking, workout logging, and personal record management.
+
+I selected this artifact for the database enhancement because it demonstrates the evolution from a simple data storage solution to a production level database design. The original 2-table schema was functional but limiting. It could only track weight over time with no context about nutrition or exercise habits that influence weight changes. This enhancement shows my ability to design normalized database schemas, implement complex relationships, and integrate database functionality with existing application logic.
+
+The database follows Third Normal Form principles. For example, the nutrition module separates foods (reusable data) from meals (time-specific instances) through a many-to-many relationship implemented with the meal_foods join table. This prevents data duplication. A single food entry like &quot;Chicken Breast&quot; can be referenced across multiple meals without storing its nutritional values repeatedly. Similarly, the workout module separates exercises (reusable definitions) from workout_sets (specific instances), allowing users to track the same exercise across multiple workout sessions without redundant data.
+
+Every table that references user data implements proper foreign key constraints with CASCADE deletion, so when a user account is deleted, all associated data (meals, workouts, goals) is automatically removed, maintaining database consistency. The meal_foods table demonstrates more nuanced relationship management with RESTRICT deletion on the food reference (preventing accidental deletion of foods that are logged in meals) while using CASCADE for the meal reference (allowing meal deletion to clean up associated food entries).
+
+Indexes are purposefully placed on frequently queried columns and foreign keys. For instance, the meals table has composite indexes on (userId, date) to optimize the common query pattern of &quot;show me all meals for this user on this date,&quot; which occurs every time a user views their daily nutrition summary. The workout_sets table indexes both sessionId and exerciseId, supporting efficient queries for both &quot;all sets in this workout&quot; and &quot;historical performance on this exercise.&quot;
+
+While Room doesn&#x27;t support traditional database triggers in SQLite, the design includes fields like totalVolume in workout_sessions and totalCalories in meals that are calculated when sets or foods are added. This design decision, storing calculated values rather than computing them on every query, demonstrates understanding of the trade-off between storage space and query performance. For a fitness app where historical data is read more often than it&#x27;s written, storing calculations improves user experience.
+
+The database design directly supports the statistical and fitness algorithms from Module 4. The nutrition_goals table stores results from the NutritionCalculator (BMR, TDEE, macro targets calculated using the Mifflin-St Jeor equation), while the workout_sets table stores estimated 1RM values calculated using Epley and Brzycki formulas. This demonstrates the connection between algorithmic computation and persistent storage; algorithms generate values, the database preserves them for historical analysis.
+
+The enhancement improved the artifact in several ways. It expanded from simple weight logging to comprehensive fitness tracking with proper entity relationships and normalization. The original schema could only answer &quot;what did I weigh on date X?&quot; The enhanced schema can answer complex questions like &quot;what&#x27;s my average protein intake this week?&quot;, &quot;have I achieved progressive overload on bench press?&quot;, and &quot;which foods contribute most to my daily calories?&quot; The normalized design prevents data explosion, tracking 1000 meals doesn&#x27;t require storing food nutritional data 1000 times. The join table pattern also scales efficiently. Foreign key constraints, unique indexes (one nutrition goal per user, one daily summary per user per date), and check constraints (through Room&#x27;s validation) prevent invalid data states that the original schema couldn&#x27;t enforce. Also, implementing TypeConverters for boolean and date handling eliminates bugs related to SQLite&#x27;s limited types, making the codebase more maintainable.
+
+This enhancement addresses Course Outcome 4 (employing well-founded techniques) and Course Outcome 5 (developing a security mindset), while also contributing to Outcomes 1, 2, and 3.
+
+The database design shows industry standard relational database principles. The normalization approach (Third Normal Form) is a technique that balances data integrity with query performance. The use of foreign keys with explicit CASCADE/RESTRICT follows database design best practices. The decision to use Android Room rather than raw SQLite demonstrates selecting appropriate tools for the application. Room provides compile-time SQL verification, type-safe DAO interfaces, and LiveData integration. The index strategy reflects understanding of query optimization principles. Indexes are placed on foreign keys, frequently filtered columns (userId, date), and columns used in WHERE clauses of common queries.
+
+The database enhancement maintains the security principles from Module 3 while adding new protections meeting Course Outcome 5. Room&#x27;s parameterized queries prevent SQL injection attacks. Every query uses proper parameterization, there are no string concatenations building SQL, which would be vulnerable. Foreign key constraints makes sure users only access their own data. The RESTRICT constraint on meal_foods to foods prevents accidental data loss (you can&#x27;t delete a food that&#x27;s logged in meals), while CASCADE constraints verifies cleanup (deleting a user removes all their data, preventing records that could leak information). TypeConverters prevent type confusion attacks where malicious input might be interpreted as the wrong data type, potentially bypassing validation.
+
+My original Module 1 plan focused on demonstrating database normalization and relationship modeling. I achieved this as planned with the 12-table schema. However, I initially underestimated how much Outcome 5 would be demonstrated through database design. The cascade deletion behavior, referential integrity constraints, and parameterized queries all contribute to security, making the database enhancement related to Outcome 5 beyond what I originally anticipated. I did not complete the optional UI components (nutrition logging screen, workout logging screen) within Module 5&#x27;s timeframe. These remain as future enhancements. However, the database layer is complete and fully functional, as verified through tests that successfully inserted foods, meals, exercises, and workout sets. The DAO layer provides all necessary methods for UI implementation when time permits.
+
+The process of expanding from 2 tables to 12 taught me the importance of planning database relationships before writing code. I initially attempted to create the nutrition module entities without fully mapping out the relationships on paper, which led to confusion about whether meal totals should be calculated on-the-fly or stored. This reinforced that database design is about modeling real world relationships, not just creating tables. I learned the distinction between logical design and physical implementation. Logically, a meal &quot;contains&quot; foods, but physically this is implemented through three tables (meals, foods, meal_foods) with foreign key relationships. The experience of integrating the Module 4 algorithms with the Module 5 database taught me how different system layers communicate. The WorkoutAnalyzer calculates estimated 1RM from weight and reps, but the database persists that value in the workout_sets table for historical tracking. The NutritionCalculator computes BMR and TDEE, but nutrition_goals stores those results so users can see how their targets evolved over time. I also learned practical lessons about Android Room&#x27;s annotation. When I initially added the 5 workout entities to the @Database annotation but forgot to clean the build, Room continued using the old generated code, causing confusing &quot;method not found&quot; errors. Understanding that annotation processors need clean builds when entity lists change saved significant debugging time.
+
+The most significant challenge was deciding how to handle database migrations. Android Room offers two options, write explicit migration code or use fallbackToDestructiveMigration. For a production app with real users, migrations are important. However, during rapid development with frequent schema changes, destructive migration is more practical. I initially attempted to write a proper v3 to v4 migration (adding the 10 new tables while preserving existing user and weight_entry data). But, during development, I frequently needed to change entity field names or relationships, which would break the migration. I solved this by using destructive migration during development, planning to write proper migrations for production deployment. This taught me the distinction between development practices and production requirements.
+
+Implementing the unit conversion system (pounds vs kilograms) revealed complexity I hadn&#x27;t anticipated. If I store in kilograms, every display requires conversion to pounds for American users. If I store in pounds, BMI calculations require conversion to kilograms. If I store in the user&#x27;s preferred unit, what happens when a user switches preferences. Do I convert all historical data? I learned there&#x27;s no perfect answer, only trade-offs. I implemented a hybrid approach. Weights are stored in the user&#x27;s preferred unit (defaulting to pounds), with the preferredUnit field in the User entity tracking this choice. The UnitConverter utility class handles conversions when needed. This works for the current implementation, but I noted in code comments that a production system should standardize on metric storage (as recommended by Apple&#x27;s HealthKit and Google Fit APIs) with display conversion only. This challenge taught me that database design decisions have far-reaching implications beyond just the schema. The choice of how to store weights affects UI code, algorithm code, and user experience. Good database design considers the entire system, not just the data layer in isolation.
+
+The Module 5 database enhancement successfully transformed FitnessApp from a simple weight tracker to a comprehensive fitness platform with proper relational database architecture. The 12-table schema demonstrates industry-standard normalization, referential integrity, and query optimization. The implementation integrates with the Module 4 algorithms, storing calculated nutrition goals and workout metrics for historical analysis. This enhancement addresses Course Outcomes 4 and 5 while contributing to outcomes 1, 2, and 3. The process taught me practical lessons about database migrations, type conversion, unit system design, and the balance between normalization theory and real-world performance requirements. Most importantly, it reinforced that database design is about modeling relationships between entities. A principle applicable far beyond databases to any complex system design problem. The FitnessApp database now provides a solid foundation for future enhancements including the nutrition logging UI, workout tracking screens, and advanced analytics dashboards. The normalized schema will scale efficiently as users log thousands of meals and workouts without data duplication or integrity issues.</div>
+                    </details>
                 </div>
             </div>
         </section>
-
         <!-- KEY FEATURES -->
         <section id="features">
             <h2>✨ Key Features</h2>
@@ -443,7 +458,7 @@
         <section id="timeline">
             <h2>📅 Development Timeline</h2>
             <ul>
-                <li><strong>January 20, 2026:</strong> Module 3 Complete - MVVM Architecture & BCrypt Security </li>
+                <li><strong>January 20, 2026:</strong> Module 3 Complete - MVVM Architecture & BCrypt Security</li>
                 <li><strong>January 27, 2026:</strong> Module 4 Complete - Algorithm Suite (25+ methods)</li>
                 <li><strong>February 3, 2026:</strong> Module 5 Complete - Database Expansion (12 tables, 100+ DAO methods)</li>
                 <li><strong>Status:</strong> All Three Technical Modules Complete - Ready for Final Portfolio Submission</li>
